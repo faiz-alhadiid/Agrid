@@ -12,68 +12,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 <body class="warna-grey-sedikit">
 <!--header-->
-    <!--awal navigasi-->
-    <div class="navbar-fixed">
-        <nav class="warna-hijau-gelap">
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">Logo</a>
-                    <a href="#" data-activates="mobile-menu" class="button-collapse">
-                        <i class="material-icons">menu</i>
-                    </a>
-
-                    <ul class="right hide-on-med-and-down">
-                        <li><a class="dropdown-trigger dropdown-button" href="#!" data-activates="dropdown1">Kategori<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <li>
-                            <div class="center row">
-                                <div class="col s12">
-                                    <div class="row">
-                                        <form>
-                                            <div class="input-field col s12 white-text">
-                                                <i class="white-text material-icons prefix">search</i>
-                                                <input type="text" placeholder="ketik di sini untuk mencari" class="white-text-text">
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="waves-effect"><a href="#"><i class="material-icons">shopping_basket</i></a></li>
-                        <li class="waves-effect"><a href="#"><i class="material-icons">shopping_cart</i></a></li>
-                        <li class="waves-effect"><a href="#">daftar</a></li>
-                        <li class="waves-effect"><a href="#">masuk</a></li>
-                    </ul>
-
-                    <ul class="side-nav" id="mobile-menu">
-                        <li>
-                            <div class="center row">
-                                <div class="col s12">
-                                    <div class="row">
-                                        <div class="input-field col s12 white-text">
-                                            <i class="white-text material-icons prefix">search</i>
-                                            <input type="text" placeholder="search" class="white-text-text" >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="waves-effect"><a href="#">toko</a></li>
-                        <li class="waves-effect"><a href="#">daftar</a></li>
-                        <li class="waves-effect"><a href="#">masuk</a></li>
-                    </ul>
-
-                    <ul id="dropdown1" class="dropdown-content">
-                        <li><a href="#!">one</a></li>
-                        <li><a href="#!">two</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#!">three</a></li>
-                    </ul>
-                </div>
-        </nav>
-    </div>
-    <!--akhir navigasi-->
-<!--akhir dari header-->
 
 <!--konten-->
 <div class="warna-grey-sedikit">
@@ -419,66 +357,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
 </div>
 <!--akhir konten-->
-
-<!--footer-->
-    <footer class="page-footer warna-grey-sedikit">
-
-        <div class="black-text white pembatas-agrid z-depth-1">
-            <div class="container">
-                Agrid adalah
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col s4">
-                    <h5 class="tulisan-hijau-gelap">Agrid</h5>
-                    <p class="black-text">
-                        <i class="material-icons">local_phone</i>
-                        +62 89 687 837 120
-                    </p>
-
-                    <p class="black-text">
-                        <i class="material-icons">email</i>
-                        agrid@gmail.com
-                    </p>
-
-                    <p class="black-text">
-                        <i class="material-icons">add_location</i>
-                        Lokasinya di rahasiakan dulu ya
-                    </p>
-                </div>
-
-                <div class="col s4">
-                    <h5 class="tulisan-hijau-gelap">Perusahaan</h5>
-                    <ul class="perusahaan-list">
-                        <li><a class="black-text" href="#!">Tentang Kami</a></li>
-                        <li><a class="black-text" href="#!">Karir</a></li>
-                        <li><a class="black-text" href="#!">Blog</a></li>
-                        <li><a class="black-text" href="#!">Pertanyaan</a></li>
-                    </ul>
-                </div>
-
-                <div class="col s4">
-                    <h5 class="tulisan-hijau-gelap">Ikuti Kami</h5>
-                    <ul class="icon-saya">
-                        <li><img src="<?php echo base_url(); ?>assets/img/google-plus.svg"></li>
-                        <li><img src="<?php echo base_url(); ?>assets/img/linkedin.svg"></li>
-                        <li><img src="<?php echo base_url(); ?>assets/img/line.svg"></li>
-                        <li><img src="<?php echo base_url(); ?>assets/img/instagram.svg"></li>
-                        <li><img src="<?php echo base_url(); ?>assets/img/facebook.svg"></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-copyright">
-            <div class="container center-align black-text">
-                © 2018 Copyright Text
-            </div>
-        </div>
-    </footer>
-<!--akhir footer-->
 
     <script src="<?php echo base_url(); ?>assets/js/jquery-1.12.4.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script>
