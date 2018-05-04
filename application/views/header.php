@@ -14,7 +14,7 @@
     <div class="navbar-fixed">
         <nav class="warna-hijau-gelap">
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo"><img src="<?php echo base_url(); ?>assets/img/logo-agrid.png" class="item-logo"></a>
+                    <a href="<?php echo base_url();?>" class="brand-logo"><img src="<?php echo base_url(); ?>assets/img/logo-agrid.png" class="item-logo"></a>
                     <a href="#" data-activates="mobile-menu" class="button-collapse">
                         <i class="material-icons">menu</i>
                     </a>
@@ -38,8 +38,8 @@
 
                         <li class="waves-effect"><a href="#"><i class="material-icons">shopping_basket</i></a></li>
                         <li class="waves-effect"><a href="#"><i class="material-icons">shopping_cart</i></a></li>
-                        <li class="waves-effect"><a href="#">Daftar</a></li>
-                        <li class="waves-effect"><a href="#">Masuk</a></li>
+                        <li class="waves-effect"><a href="<?php echo base_url(); ?>register">Daftar</a></li>
+                        <li class="waves-effect"><a href="<?php echo base_url(); ?>login">Masuk</a></li>
                     </ul>
 
                     <ul class="side-nav" id="mobile-menu">
