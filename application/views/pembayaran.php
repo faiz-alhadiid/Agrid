@@ -96,9 +96,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                                 <p><span class="pembayaran-title">Kurir Pengirim</span><span class="pembayaran-isi">:</span><b>JNE</b></p>
 
-                                                <p><span  class="pembayaran-title">Total Barang</span><span class="pembayaran-isi">:</span><b><?php echo $item['jumlahProduk']?></b></p>
+                                                <p><span  class="pembayaran-title">Total Barang</span><span class="pembayaran-isi">:</span><b><?php echo $item['jumlah_produk']?></b></p>
 
-                                                <p><span class="pembayaran-title">Subtotal</span><span class="pembayaran-isi">:</span><b>Rp <?php echo $item['totalHarga'] *$item['jumlahProduk'];?></b></p>
+                                                <p><span class="pembayaran-title">Subtotal</span><span class="pembayaran-isi">:</span><b>Rp <?php echo $item['totalHarga'] *$item['jumlah_produk'];?></b></p>
 
                                                 <p><span class="pembayaran-title">Biaya Kirim</span><span class="pembayaran-isi">:</span><b>Rp 15.000</b></p>
                                             </span>
@@ -108,7 +108,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                 <hr>
 
-                                <h4 class="clearfix"><span class="left">Total: </span><span class="right"><?php echo $item['totalHarga'] * $item['jumlahProduk'] + 15000;?></span></h4>
+                                <h4 class="clearfix"><span class="left">Total: </span><span class="right"><?php echo $item['totalHarga'] * $item['jumlah_produk'] + 15000;?></span></h4>
                             </div>
                         </li> <!-- akhir daftar pembelian -->
 
