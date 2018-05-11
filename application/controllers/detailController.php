@@ -14,8 +14,6 @@ class detailController extends CI_Controller {
 //            echo '<pre>';
 //            print_r($data['detail_item']);
 //            echo '</pre>';
-        $this->load->view("header.php");
         $this->load->view("detail.php", $data);
-        $this->load->view("footer.php");
     }
 }
