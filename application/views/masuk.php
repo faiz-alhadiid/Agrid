@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 ?>
     <!--isi content-->
     <div class="container center">
-        <img src="<?php echo base_url(); ?>assets/img/logo-agrid.png" class="logo-form">
+        <img src="<?php echo base_url(); ?>assets/img/logo-agrid.png" class="logo-form" style="width:250px">
         <div class="row center" style="margin-left: -2px;">
             <div class="col offset-m4 z-depth-4 masuk-login" style="width:320px;">
                 <?php echo form_open('login/verify') ?>

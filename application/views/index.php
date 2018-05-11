@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <div class="card-action">
                             <p class="harga-produk">Rp <?=$d->harga?></p>
                         </div>
-                        <a class="waves-effect waves-light btn warna-hijau-gelap" style="width: 100%; margin-top: 20px;">Beli</a>
+                        <a href = "<?= base_url().'beli/'.$d->produkID?>"class="waves-effect waves-light btn warna-hijau-gelap" style="width: 100%; margin-top: 20px;">Beli</a>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4"><?=$d->produkNama?><i class="material-icons right">close</i></span>
@@ -45,13 +45,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <?php } 
             }?>  
         </div>
+
+        <?php 
+            $data = ['waves-effect' ,'waves-effect', 'waves-effect', 'waves-effect', 'waves-effect'];
+            if (isset($_SESSION['page'])){
+                $t = $_SESSION['page'];
+                $data[$t-1] = "active";
+            } else {
+                $data[0] = "active";
+            }
+        ?>
         <ul class="pagination" style="text-align: right;">
             <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="<?=base_url()."page/1"?>">1</a></li>
-            <li class="waves-effect"><a href="<?=base_url()."page/2"?>">2</a></li>
-            <li class="waves-effect"><a href="<?=base_url()."page/3"?>">3</a></li>
-            <li class="waves-effect"><a href="<?=base_url()."page/4"?>">4</a></li>
-            <li class="waves-effect"><a href="<?=base_url()."page/5"?>">5</a></li>
+            <li class="<?= $data[0] ?>"><a href="<?=base_url()."page/1"?>">1</a></li>
+            <li class="<?= $data[1] ?>"><a href="<?=base_url()."page/2"?>">2</a></li>
+            <li class="<?= $data[2] ?>"><a href="<?=base_url()."page/3"?>">3</a></li>
+            <li class="<?= $data[3] ?>"><a href="<?=base_url()."page/4"?>">4</a></li>
+            <li class="<?= $data[4] ?>"><a href="<?=base_url()."page/5"?>">5</a></li>
             <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
         </ul>
     </div>

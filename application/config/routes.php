@@ -56,6 +56,7 @@ $route['register/process'] = "MainController/processRegister";
 $route['register'] = "MainController/register";
 $route['payment'] = "MainController/payment";
 $route['search'] = "MainController/search";
+$route['beli/(:any)'] = "MainController/beli/$1";
 $route['page/(:any)'] = "MainController/page/$1";
 $route['default_controller'] = 'MainController';
 $route['404_override'] = '';
