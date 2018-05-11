@@ -1,6 +1,84 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AGRID</title>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/materialize.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/lightbox.min.css">
+    <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/logo.png">
+</head>
+<body>
+<!--header-->
+<!--awal navigasi-->
+<div class="navbar-fixed">
+    <nav class="warna-hijau-gelap">
+        <div class="nav-wrapper">
+            <a href="<?php echo base_url();?>" class="brand-logo"><img src="<?php echo base_url(); ?>assets/img/logo-agrid.png" class="item-logo" style="width:90px"></a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger dropdown-button" href="#!" data-activates="dropdown1">Kategori<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li>
+                    <div class="row" style="width: 800px;">
+                        <div class="col s12">
+                            <div class="row">
+                                <form action = "<?= base_url()?>search">
+                                    <div class="input-field col s12 white-text">
+                                        <i class="white-text material-icons prefix">search</i>
+                                        <input type="text" placeholder="Ketik disini untuk Pencarian Pupuk" class="white-text-text" name="value">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="waves-effect"><a href="#"><i class="material-icons">shopping_basket</i></a></li>
+                <li class="waves-effect"><a href="#"><i class="material-icons">shopping_cart</i></a></li>
+                <?php if(isset($_SESSION['nama'])&&isset($_SESSION['email'])) {?>
+
+                    <li class="waves-effect"><a href="<?php echo base_url(); ?>logout">Logout</a></li>
+                <?php } else { ?>
+                    <li class="waves-effect"><a href="<?php echo base_url(); ?>register">Daftar</a></li>
+                    <li class="waves-effect"><a href="<?php echo base_url(); ?>login">Masuk</a></li>
+                <?php }?>
+            </ul>
+
+            <ul class="side-nav" id="mobile-menu">
+                <li>
+                    <div class="row" style="width: 800px">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12 white-text">
+                                    <i class="black-text material-icons prefix">search</i>
+                                    <input type="text" placeholder="Cari Pupuk" class="white-text-text" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="waves-effect"><a href="#">toko</a></li>
+                <li class="waves-effect"><a href="#">daftar</a></li>
+                <li class="waves-effect"><a href="#">masuk</a></li>
+            </ul>
+
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">Pupuk Organik</a></li>
+                <li><a href="#!">Pupuk Anorganik</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
 <!--konten-->
 <div class="warna-grey-sedikit">
     <div class="container">
@@ -55,7 +133,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                                 <option value="1">Tidak</option>
                                                 <option value="2">Ya</option>
                                             </select>
-                                            <label>Materialize Select</label>
+                                            <label>Asuransi</label>
                                         </div>
                                     </div>
                                 </div> <!-- definisi Produk yang mau di beli -->
@@ -290,3 +368,59 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
 </div>
 <!--akhir konten-->
+
+
+
+    <footer class="page-footer warna-grey-sedikit" style="background-image: url(<?php echo base_url(); ?>assets/img/background.jpg);">
+        <div class="container green-text" style="text-align: left;">
+            <p>AGRID (Agriculture Indonesia) merupakan sebuah wadah bagi para pemilik lahan atau petani untuk
+                <br>mendapatkan pupuk yang berkualitas dan dengan harga yang terjangkau.
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s4">
+                    <img src="<?php echo base_url(); ?>assets/img/logo-agrid.png" style="width: 100px;">
+                    <p class="black-text">
+                        <i class="material-icons">local_phone</i>
+                        +62 89 687 837 120
+                    </p>
+
+                    <p class="black-text">
+                        <i class="material-icons">email</i>
+                        agrid@gmail.com
+                    </p>
+
+                    <p class="black-text">
+                        <i class="material-icons">location_on</i>
+                        Jl. Veteran No.8, Malang, 65145, Indonesia
+                    </p>
+                </div>
+
+                <div class="col s4">
+                    <h5 class="tulisan-hijau-gelap">More Links</h5>
+                    <ul class="icon-saya">
+                        <li><a class="btn-floating btn-small waves-effect waves-light"><img src="<?php echo base_url(); ?>assets/img/instagram.svg"></a></li>
+                        <li><a class="btn-floating btn-small waves-effect waves-light"><img src="<?php echo base_url(); ?>assets/img/facebook.svg"></a></li>
+                        <li><a class="btn-floating btn-small waves-effect waves-light"><img src="<?php echo base_url(); ?>assets/img/line.svg"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align black-text">
+                © 2018 Agrid, All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!--akhir footer-->
+
+    <script src="<?php echo base_url(); ?>assets/js/jquery-1.12.4.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/lightbox.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
+    </body>
+    </html>
