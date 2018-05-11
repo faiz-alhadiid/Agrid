@@ -6,6 +6,7 @@
     <title>AGRID</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/materialize.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/lightbox.min.css">
     <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/logo.png">
 </head>
 <body>

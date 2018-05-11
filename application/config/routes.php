@@ -66,3 +66,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['pembayaran'] = "pembayaranController/index";
 //akhir rute ke halaman pembayaran
 
+//awal rute ke halaman pembayaran
+$route['detail'] = "detailController/index";
+//akhir rute ke halaman pembayaran
+
