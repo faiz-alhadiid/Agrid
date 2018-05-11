@@ -30,8 +30,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <label for="password">Password</label>
                 </div>
                 <div class="input-field col s11 center" style="margin-left: 13px; margin-top: 30px; margin-bottom: 20px;">
-                    <input type="submit" value = "DAFTAR" class="waves-effect waves-light btn warna-hijau-gelap" style="width:100%;">
-                    
+                    <input type="submit" value = "DAFTAR" class="waves-effect waves-light btn warna-hijau-gelap" style="width:100%;">                    
                 </div>
             <?php echo form_close() ?>
             <p class="center" style="margin-bottom: 35px;">Sudah punya akun? <a href="#">Masuk</a></p>

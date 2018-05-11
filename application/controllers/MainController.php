@@ -13,9 +13,18 @@ class MainController extends CI_Controller{
         $this->load->model('agrid_model');
     }
     public function index(){
+        $res = $this->agrid_model->readRecommendedProduct(6);
+        $temp = array('data' =>$res);
         $this->load->view('header.php');
-        $this->load->view('index.php'); 
+        $this->load->view('index.php', $temp); 
         $this->load->view('footer.php');       
+    }
+    public function page($offset){
+        $res = $this->agrid_model->readRecommendedProduct(6, $offset-1);
+        $temp = array('data' =>$res);
+        $this->load->view('header.php');
+        $this->load->view('index.php', $temp); 
+        $this->load->view('footer.php');
     }
     public function login(){
         if (!isset($_SESSION['nama'])) {
@@ -23,6 +32,12 @@ class MainController extends CI_Controller{
         } else {
             redirect('', 'refresh');
         }
+    }
+    public function logout(){
+        $this->session->unset_userdata('nama');
+        $this->session->unset_userdata('email');
+        $this->session->sess_destroy();
+        redirect('', 'refresh');
     }
     public function verifyLogin(){
         $this->form_validation->set_rules('email', 'Email', 'required|trim');
@@ -91,6 +106,14 @@ class MainController extends CI_Controller{
             $this->session->set_flashdata('failedMessage', 'invalid');
             redirect('register', 'refresh');
         }
+    }
+    public function search(){
+        $value = $this->input->get('value');
+        $data = $this->agrid_model->readProductBySearch($value);
+        $pass = array('value' =>$value, 'data'=>$data);
+        $this->load->view('header');
+        $this->load->view('search', $pass);
+        $this->load->view('footer');
     }
     public function payment(){
         $this->load->view("pembayaran.php");

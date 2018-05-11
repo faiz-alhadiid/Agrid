@@ -18,13 +18,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <div class="container">
         <div class="row">
             <div class="col s12">
-                <hr><h5 class="center-align thick">PUPUK REKOMENDASI</h5><hr style="margin-bottom: 40px;">
+                <hr><h5 class="center-align thick">HASIL PENCARIAN PRODUK DENGAN KEYWORD <?= $value ?></h5><hr style="margin-bottom: 40px;">
             </div>
-            
             <?php
-            if ($data){ 
+            if ($data){  
             foreach ($data as $d){ ?>
-            <div class="col l4 m6">
+            <div class="col l4 m6" style = "padding-top:2%">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" style="height: 220px;" src="<?php echo base_url(); ?>assets/img/produk/<?=$d->gambar?>">
@@ -52,20 +51,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </div>    
             </div>
             <?php } 
-            }?>  
+            } else {
+                echo "<center><h5>Tidak ada hasil yang ditemukan</h5></center>";
+            }    ?>  
         </div>
         <ul class="pagination" style="text-align: right;">
             <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="<?=base_url()."page/1"?>">1</a></li>
-            <li class="waves-effect"><a href="<?=base_url()."page/2"?>">2</a></li>
-            <li class="waves-effect"><a href="<?=base_url()."page/3"?>">3</a></li>
-            <li class="waves-effect"><a href="<?=base_url()."page/4"?>">4</a></li>
-            <li class="waves-effect"><a href="<?=base_url()."page/5"?>">5</a></li>
-            <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!">2</a></li>
+            <li class="waves-effect"><a href="#!">3</a></li>
+            <li class="waves-effect"><a href="#!">4</a></li>
+            <li class="waves-effect"><a href="#!">5</a></li>
+            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
         </ul>
     </div>
     <!--akhir produk ...-->
-
     <script src="<?php echo base_url(); ?>assets/js/jquery-1.12.4.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/main.js"></script>

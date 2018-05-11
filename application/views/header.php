@@ -25,10 +25,10 @@
                             <div class="row" style="width: 800px;">
                                 <div class="col s12">
                                     <div class="row">
-                                        <form>
+                                        <form action = "<?= base_url()?>search">
                                             <div class="input-field col s12 white-text">
                                                 <i class="white-text material-icons prefix">search</i>
-                                                <input type="text" placeholder="Ketik disini untuk Pencarian Pupuk" class="white-text-text">
+                                                <input type="text" placeholder="Ketik disini untuk Pencarian Pupuk" class="white-text-text" name="value">
                                             </div>
                                         </form>
                                     </div>
@@ -38,8 +38,13 @@
 
                         <li class="waves-effect"><a href="#"><i class="material-icons">shopping_basket</i></a></li>
                         <li class="waves-effect"><a href="#"><i class="material-icons">shopping_cart</i></a></li>
+                        <?php if(isset($_SESSION['nama'])&&isset($_SESSION['email'])) {?>
+                        <li class="waves-effect"><a href="<?php echo base_url(); ?>register">Daftar</a></li>
+                        <li class="waves-effect"><a href="<?php echo base_url(); ?>logout">Logout</a></li>
+                        <?php } else { ?>
                         <li class="waves-effect"><a href="<?php echo base_url(); ?>register">Daftar</a></li>
                         <li class="waves-effect"><a href="<?php echo base_url(); ?>login">Masuk</a></li>
+                        <?php }?>
                     </ul>
 
                     <ul class="side-nav" id="mobile-menu">
