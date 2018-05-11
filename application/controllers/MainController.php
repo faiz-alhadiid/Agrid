@@ -22,13 +22,16 @@ class MainController extends CI_Controller{
     public function page($offset){
         $res = $this->agrid_model->readRecommendedProduct(6, $offset-1);
         $temp = array('data' =>$res);
+        $this->session->set_flashdata('page', $offset);
         $this->load->view('header.php');
         $this->load->view('index.php', $temp); 
         $this->load->view('footer.php');
     }
     public function login(){
         if (!isset($_SESSION['nama'])) {
+            $this->load->view('header.php');
             $this->load->view("masuk.php");
+            $this->load->view('footer.php');
         } else {
             redirect('', 'refresh');
         }
@@ -60,7 +63,7 @@ class MainController extends CI_Controller{
                 //echo $password.'<br>';
                 if (password_verify($password, $passwordFromDB)){
                     //echo 'ya';
-                    $this->session->set_userdata(array('nama'=>$log[0]->nama,'email' => $_POST['email']));
+                    $this->session->set_userdata(array('userID'=>$log[0]->userID, 'nama'=>$log[0]->nama,'email' => $_POST['email']));
                     redirect('', 'refresh');
                 } else {
                     //echo 'na';
@@ -78,7 +81,9 @@ class MainController extends CI_Controller{
         }
     }
     public function register(){
+        $this->load->view('header.php');
         $this->load->view("daftar.php");
+        $this->load->view('footer.php');
     }
     public function processRegister(){
         $this->form_validation->set_rules('nama', 'Nama', 'required' );
@@ -117,5 +122,27 @@ class MainController extends CI_Controller{
     }
     public function payment(){
         $this->load->view("pembayaran.php");
+    }
+    public function produk(){
+        $this->load->view('produk');
+    }
+    public function beli($id){
+        if (isset($_SESSION['userID'])){
+            $query = $this->agrid_model->getProductById($id);
+            $userID = $_SESSION['userID'];
+            $data = array(
+                'produkID' =>$id,
+                'totalHarga' => $query[0]->harga,
+                'jumlah_produk' => 1
+            );
+            print_r($this->agrid_model->getChart($userID, $id, 1));
+            if (!$this->agrid_model->getChart($userID, $id, 1)){
+                $this->agrid_model->addCart($userID, $data);
+            }
+            
+            redirect('', 'refresh');
+        } else {
+            redirect('', 'refresh');
+        }
     }
 }

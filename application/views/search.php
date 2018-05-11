@@ -21,7 +21,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <div class="card-action">
                             <p class="harga-produk">Rp <?=$d->harga?></p>
                         </div>
-                        <a class="waves-effect waves-light btn warna-hijau-gelap" style="width: 100%; margin-top: 20px;">Beli</a>
+                        <a href = "<?= base_url().'beli/'.$d->produkID?>" giclass="waves-effect waves-light btn warna-hijau-gelap" style="width: 100%; margin-top: 20px;">Beli</a>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4"><?=$d->produkNama?><i class="material-icons right">close</i></span>
