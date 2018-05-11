@@ -57,3 +57,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
     <!--akhir produk ...-->
 
+    <script src="<?php echo base_url(); ?>assets/js/jquery-1.12.4.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
+</body>
+</html>

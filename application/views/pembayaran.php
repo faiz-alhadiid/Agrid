@@ -65,27 +65,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <ul class="collection">
                                     <li class="collection-item avatar">
                                         <img src="img/frezier1.jpg" alt="" class="circle">
-                                        <span class="title">Nama Produk</span>
+                                        <span class="title">Nama Produk: <br> <?php echo $item['produkNama']?></span>
                                         <p>
-                                            Pupuk kok baik sih
+                                            Deskripsi:<br>
+                                            <?php echo $item['deskripsiProduk'];?>
+                                            <br>
                                         </p>
                                         <p>
-                                            Rp. 41.99x3
-                                        </p>
-
-                                        <a href="#!" class="secondary-content">
-                                            <i class="material-icons red-text">delete</i>
-                                        </a>
-                                    </li>
-
-                                    <li class="collection-item avatar">
-                                        <img src="img/frezier1.jpg" alt="" class="circle">
-                                        <span class="title">Nama Produk</span>
-                                        <p>
-                                            Pupuk kok baik sih
-                                        </p>
-                                        <p>
-                                            Rp. 41.99x3
+                                            <?php echo $item['harga'];?>
                                         </p>
 
                                         <a href="#!" class="secondary-content">
@@ -105,15 +92,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                         <div class="collapsible-body clearfix">
                                             <span>
-                                                <p><span class="pembayaran-title">Penerima</span><span class="pembayaran-isi">:</span><b>Dwiki Nuridhuna</b></p>
+                                                <p><span class="pembayaran-title">Penerima</span><span class="pembayaran-isi">:</span><b><?php echo $item['nama']?></b></p>
 
                                                 <p><span class="pembayaran-title">Kurir Pengirim</span><span class="pembayaran-isi">:</span><b>JNE</b></p>
 
-                                                <p><span  class="pembayaran-title">Total Barang</span><span class="pembayaran-isi">:</span><b>5 Kg</b></p>
+                                                <p><span  class="pembayaran-title">Total Barang</span><span class="pembayaran-isi">:</span><b><?php echo $item['jumlahProduk']?></b></p>
 
-                                                <p><span class="pembayaran-title">Subtotal</span><span class="pembayaran-isi">:</span><b>Rp 50.000</b></p>
+                                                <p><span class="pembayaran-title">Subtotal</span><span class="pembayaran-isi">:</span><b>Rp <?php echo $item['totalHarga'] *$item['jumlahProduk'];?></b></p>
 
-                                                <p><span class="pembayaran-title">Biaya Kirim</span><span class="pembayaran-isi">:</span><b>Rp 100.000</b></p>
+                                                <p><span class="pembayaran-title">Biaya Kirim</span><span class="pembayaran-isi">:</span><b>Rp 15.000</b></p>
                                             </span>
                                         </div>
                                     </li>
@@ -121,7 +108,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                 <hr>
 
-                                <h4 class="clearfix"><span class="left">Total: </span><span class="right">Rp 125.000</span></h4>
+                                <h4 class="clearfix"><span class="left">Total: </span><span class="right"><?php echo $item['totalHarga'] * $item['jumlahProduk'] + 15000;?></span></h4>
                             </div>
                         </li> <!-- akhir daftar pembelian -->
 

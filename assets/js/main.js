@@ -4,7 +4,7 @@ $(document).ready(function () {
     });
 
     $('.button-collapse').sideNav();
-    
+
     $('.dropdown-trigger').dropdown();
 
     $('.slider').slider({
@@ -12,4 +12,8 @@ $(document).ready(function () {
     });
 
     $('select').material_select();
+});
+
+$(document).ready(function () {
+    $('.modal').modal();
 });
