@@ -146,19 +146,42 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <div class="isi-side-bar center">
                         <div class="row">
                             <div class="input-field col s10 offset-s1">
-                                <input type="number" class="validate">
+                                <input type="number" class="validate" id = 'luasTanah'>
                                 <label>Masukan Luas Lahan perhektar</label>
                             </div>
-
                             <div class="input-field col s10 offset-s1">
-                                <select>
+                                <select id = 'statusP'>
 <!--                                    --><?php //foreach ($detail_item as $item){ ?>
 <!--                                    <option value="1">--><?php //echo $item['namaKategori'];?><!--</option>-->
 <!--                                    --><?php //} ?>
 
-                                    <option value="1">Pupuk NPK15-15-15</option>
-                                    <option value="2">Pupuk NPK10-10-10</option>
-                                    <option value="3">Pupuk NPK30-6-8</option>
+                                    <option value="0">Rendah</option>
+                                    <option value="1">Sedang</option>
+                                    <option value="2">Tinggi</option>
+                                </select>
+                                <label>Masukkan nilai kandungan unsur Fosfor</label>
+                            </div>
+                            <div class="input-field col s10 offset-s1">
+                                <select id = 'statusK'>
+<!--                                    --><?php //foreach ($detail_item as $item){ ?>
+<!--                                    <option value="1">--><?php //echo $item['namaKategori'];?><!--</option>-->
+<!--                                    --><?php //} ?>
+
+                                    <option value="0">Rendah</option>
+                                    <option value="1">Sedang</option>
+                                    <option value="2">Tinggi</option>
+                                </select>
+                                <label>Masukkan nilai kandungan unsur Kalium</label>
+                            </div>
+                            <div class="input-field col s10 offset-s1">
+                                <select id = 'jenis'>
+<!--                                    --><?php //foreach ($detail_item as $item){ ?>
+<!--                                    <option value="1">--><?php //echo $item['namaKategori'];?><!--</option>-->
+<!--                                    --><?php //} ?>
+
+                                    <option value="0">Pupuk NPK15-15-15</option>
+                                    <option value="1">Pupuk NPK10-10-10</option>
+                                    <option value="2">Pupuk NPK30-6-8</option>
                                 </select>
                                 <label>Pilih Jenis Pupuk</label>
                             </div>

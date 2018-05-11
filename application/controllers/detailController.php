@@ -18,4 +18,9 @@ class detailController extends CI_Controller {
         $this->load->view("detail.php", $data);
         $this->load->view("footer.php");
     }
+    public function hitung() {
+        $this->load->view("header.php");
+        $this->load->view("hitung.php");
+        $this->load->view("footer.php");
+    }
 }

@@ -11,12 +11,12 @@ Class Pembayaran_Model extends CI_Model {
         $this->load->database();
     }
 
-    public function getPembayaran() {
+    public function getPembayaran($userID) {
        $this->db->select('keranjang.*, user.*, produk.*');
        $this->db->from('keranjang');
        $this->db->join('user', 'user.userID=keranjang.userID');
        $this->db->join('produk', 'produk.produkID=keranjang.produkID');
-       $this->db->where('keranjang.status', 0);
+       $this->db->where(array('keranjang.status' => 0, 'user.userID' => $userID));
        $query = $this->db->get();
        return $query->result_array();
     }
