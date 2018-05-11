@@ -60,3 +60,8 @@ $route['page/(:any)'] = "MainController/page/$1";
 $route['default_controller'] = 'MainController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+//awal rute ke halaman pembayaran
+$route['pembayaran'] = "pembayaranController/index";
+//akhir rute ke halaman pembayaran
+

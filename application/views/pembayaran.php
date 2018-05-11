@@ -24,28 +24,59 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
 
                     <div class="col s6 right-align tulisan-hijau-gelap">
-                        <h5><b>Rp 185.000</b></h5>
+                        <h5><b>Rp.<?php echo 1200000;?></b></h5>
                     </div>
 
                     <div class="col s12">
-                        <button class="btn btn-large waves-effect warna-kuning-gelap">metode pembayaran</button>
+                        <a class="btn btn-large waves-effect waves-light warna-kuning-gelap modal-trigger" href="#bayar">metode pembayaran</a>
+
+                        <!--ini struktur modal-->
+                        <div id="bayar" class="modal">
+                            <div class="modal-content">
+                                <h4>Metode Pembayaran</h4>
+
+                                <hr>
+
+                                <p>Total Pembayaran: <b>Rp. 3.000.000</b></p>
+
+                                <hr>
+
+                                <ul class="collection with-header">
+                                    <li class="collection-header"><h4>Tranfer Bank</h4></li>
+                                    <li class="collection-item"><div><a href="#modal-byr">Mandiri<span class="secondary-content"><i class="material-icons">send</i></span></a></div></li>
+                                    <li class="collection-item"><div>BCA<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                                    <li class="collection-item"><div>BRI<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                                    <li class="collection-item"><div>BNI<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                                </ul>
+
+                                <ul class="collection with-header">
+                                    <li class="collection-header"><h4>Gerai Retail</h4></li>
+                                    <li class="collection-item"><div>AlfaMart<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                                    <li class="collection-item"><div>IndoMart<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!--akhir ini struktur modal-->
                     </div>
                 </div>
 
                 <hr>
 
+                <?php foreach ($keranjang_item as $item) { ?>
+
                 <div class="row pembayaran-daftar">
                     <ul class="collapsible">
-                        <li>
+                        <li>    <!-- awal daftar pembelian -->
                             <div class="collapsible-header">
-                                Toko 1
+                                <?php echo "Toko ".$item['cartID']; ?>
                                 <i class="material-icons">arrow_drop_down</i>
                             </div>
 
                             <div class="collapsible-body">
                                 <ul class="collection">
                                     <li class="collection-item avatar">
-                                        <img src="<?php echo base_url(); ?>assets/img/frezier1.jpg" alt="" class="circle">
+                                        <img src="img/frezier1.jpg" alt="" class="circle">
                                         <span class="title">Nama Produk</span>
                                         <p>
                                             Pupuk kok baik sih
@@ -58,29 +89,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                             <i class="material-icons red-text">delete</i>
                                         </a>
                                     </li>
+
                                     <li class="collection-item avatar">
-                                        <i class="material-icons circle">folder</i>
-                                        <span class="title">Title</span>
-                                        <p>First Line <br>
-                                            Second Line
+                                        <img src="img/frezier1.jpg" alt="" class="circle">
+                                        <span class="title">Nama Produk</span>
+                                        <p>
+                                            Pupuk kok baik sih
                                         </p>
-                                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                                    </li>
-                                    <li class="collection-item avatar">
-                                        <i class="material-icons circle green">insert_chart</i>
-                                        <span class="title">Title</span>
-                                        <p>First Line <br>
-                                            Second Line
+                                        <p>
+                                            Rp. 41.99x3
                                         </p>
-                                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                                    </li>
-                                    <li class="collection-item avatar">
-                                        <i class="material-icons circle red">play_arrow</i>
-                                        <span class="title">Title</span>
-                                        <p>First Line <br>
-                                            Second Line
-                                        </p>
-                                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+
+                                        <a href="#!" class="secondary-content">
+                                            <i class="material-icons red-text">delete</i>
+                                        </a>
                                     </li>
                                 </ul>
 
@@ -113,19 +135,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                 <h4 class="clearfix"><span class="left">Total: </span><span class="right">Rp 125.000</span></h4>
                             </div>
-                        </li>
+                        </li> <!-- akhir daftar pembelian -->
 
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
 
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
                     </ul>
                 </div>
+                <?php } ?>
             </div>
 
         </div>
