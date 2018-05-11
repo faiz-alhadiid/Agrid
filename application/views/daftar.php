@@ -1,16 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Daftar</title>
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/materialize.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-    <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/logo.png">
-</head>
-<body style="background-image: url(<?php echo base_url(); ?>assets/img/background-form.jpg)">
 <!--isi content-->
 <div class="container center">
     <img src="<?php echo base_url(); ?>assets/img/logo-agrid.png" class="logo-form">
@@ -38,10 +28,3 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
 </div>
 <!--akhir isi kontent-->
-
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery-1.12.4.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/main.js"></script>
-</body>
-</html>

@@ -1,18 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/materialize.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-</head>
-<body class="warna-grey-sedikit">
-<!--header-->
-
 <!--konten-->
 <div class="warna-grey-sedikit">
     <div class="container">
@@ -147,9 +135,3 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
 </div>
 <!--akhir konten-->
-
-<script src="<?php echo base_url(); ?>assets/js/jquery-1.12.4.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/main.js"></script>
-</body>
-</html>

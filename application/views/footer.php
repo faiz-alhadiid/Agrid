@@ -1,14 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>AGRID</title>
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/materialize.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-    <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/logo.png">
-</head>
-<body>
 <!--footer-->
 <footer class="page-footer warna-grey-sedikit" style="background-image: url(<?php echo base_url(); ?>assets/img/background.jpg);">
     <div class="container green-text" style="text-align: left;">
