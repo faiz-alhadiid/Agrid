@@ -76,9 +76,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
             
             document.getElementById('namaPupuk').innerHTML = stringJenis;
             document.getElementById('npk').innerHTML = "Berat "+(pil.npk * luasTanah)+" kg";
-            document.getElementById('urea').innerHTML = "Urea : "+(pil.urea * luasTanah);
-            document.getElementById('sp36').innerHTML = "SP-36 : "+(pil.sp36 * luasTanah);
-            document.getElementById('kcl').innerHTML = "KCl : "+(pil.kcl * luasTanah);
+            document.getElementById('urea').innerHTML = "Urea : "+(pil.urea * luasTanah)+" kg";
+            document.getElementById('sp36').innerHTML = "SP-36 : "+(pil.sp36 * luasTanah+" kg");
+            document.getElementById('kcl').innerHTML = "KCl : "+(pil.kcl * luasTanah+" kg");
 
             
 
@@ -105,9 +105,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!--                                    <option value="1">--><?php //echo $item['namaKategori'];?><!--</option>-->
 <!--                                    --><?php //} ?>
 
-                                    <option value="0">Rendah</option>
-                                    <option value="1">Sedang</option>
-                                    <option value="2">Tinggi</option>
+                                    <option value="0">Rendah (&lt 20 mg P2O5/100g)</option>
+                                    <option value="1">Sedang(20 mg - 40 mg P2O5/100g)</option>
+                                    <option value="2">Tinggi(&gt 40 mg P2O5/100g)</option>
                                 </select>
                                 <label>Masukkan nilai kandungan unsur Fosfor</label>
                             </div>
@@ -117,9 +117,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!--                                    <option value="1">--><?php //echo $item['namaKategori'];?><!--</option>-->
 <!--                                    --><?php //} ?>
 
-                                    <option value="0">Rendah</option>
-                                    <option value="1">Sedang</option>
-                                    <option value="2">Tinggi</option>
+                                    <option value="0">Rendah (&lt 20 mg K2O/100g)</option>
+                                    <option value="1">Sedang(20 mg - 40 mg K2O/100g)</option>
+                                    <option value="2">Tinggi(&gt 40 mg K2O/100g)</option>
                                 </select>
                                 <label>Masukkan nilai kandungan unsur Kalium</label>
                             </div>
@@ -129,9 +129,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!--                                    <option value="1">--><?php //echo $item['namaKategori'];?><!--</option>-->
 <!--                                    --><?php //} ?>
 
-                                    <option value="0">Pupuk NPK15-15-15</option>
-                                    <option value="1">Pupuk NPK10-10-10</option>
-                                    <option value="2">Pupuk NPK30-6-8</option>
+                                    <option value="0">NPK 15-15-15</option>
+                                    <option value="1">NPK 10-10-10</option>
+                                    <option value="2">NPK 30-6-8</option>
                                 </select>
                                 <label>Pilih Jenis Pupuk</label>
                             </div>
@@ -150,12 +150,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                     <div class="left" style="width:100%;">
                         <ul class="collection with-header">
-                            <li class="collection-header"><h5 id = 'namaPupuk'>Pupuk NPK 15-15-15</h5></li>
-                            <li class="collection-item"><div id ='npk'>Berat 350 kg</div></li>
+                            <li class="collection-header"><h5 id = 'namaPupuk'>-</h5></li>
+                            <li class="collection-item"><div id ='npk'>Berat - kg</div></li>
                             <li class="collection-item"><div>Tambahan : </div></li>
-                            <li class="collection-item"><div id = 'urea'>Urea : 50kg</div></li>
-                            <li class="collection-item"><div id = 'sp36'>SP-36 : 0 Kg</div></li>
-                            <li class="collection-item"><div id = 'kcl'>KCl : 75 Kg</div></li>
+                            <li class="collection-item"><div id = 'urea'>Urea : - kg</div></li>
+                            <li class="collection-item"><div id = 'sp36'>SP-36 : - Kg</div></li>
+                            <li class="collection-item"><div id = 'kcl'>KCl : - Kg</div></li>
                         </ul>
                     </div>
             </div> <!-- akhir side bar-->

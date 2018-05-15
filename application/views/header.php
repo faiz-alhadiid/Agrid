@@ -38,7 +38,7 @@
                         </li>
 
                         <li class="waves-effect"><a href="#"><i class="material-icons">shopping_basket</i></a></li>
-                        <li class="waves-effect"><a href="#"><i class="material-icons">shopping_cart</i></a></li>
+                        <li class="waves-effect"><a href="<?= base_url()?>pembayaran"><i class="material-icons">shopping_cart</i></a></li>
                         <?php if(isset($_SESSION['nama'])&&isset($_SESSION['email'])) {?>
                         
                         <li class="waves-effect"><a href="<?php echo base_url(); ?>logout">Logout</a></li>

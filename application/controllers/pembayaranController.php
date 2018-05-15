@@ -17,9 +17,9 @@ class pembayaranController extends CI_Controller {
     //        echo '<pre>';
     //        print_r($data['keranjang_item']);
     //        echo '</pre>';
-            $this->load->view("header.php");
+            // $this->load->view("header.php");
             $this->load->view("pembayaran.php", $data);
-            $this->load->view("footer.php");
+            // $this->load->view("footer.php");
         } else{
             redirect("", 'refresh');
         }

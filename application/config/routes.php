@@ -70,3 +70,6 @@ $route['pembayaran'] = "pembayaranController/index";
 $route['detail'] = "detailController/index";
 //akhir rute ke halaman pembayaran
 
+$route['hitung'] = "detailController/hitung";
+
+

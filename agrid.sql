@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2018 at 12:18 PM
+-- Generation Time: May 15, 2018 at 04:56 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -62,8 +62,16 @@ CREATE TABLE `keranjang` (
   `userID` int(10) NOT NULL,
   `produkID` int(10) NOT NULL,
   `totalHarga` int(15) NOT NULL,
-  `jumlah produk` int(15) NOT NULL
+  `jumlah_produk` int(15) NOT NULL,
+  `status` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `keranjang`
+--
+
+INSERT INTO `keranjang` (`cartID`, `userID`, `produkID`, `totalHarga`, `jumlah_produk`, `status`) VALUES
+(3, 2, 7, 10000, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -232,7 +240,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `cartID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `cartID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `produk`

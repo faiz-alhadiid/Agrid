@@ -1,6 +1,3 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +91,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
 
                     <div class="col s12">
-                        <a class="btn btn-large waves-effect waves-light warna-kuning-gelap modal-trigger" href="#bayar">metode pembayaran</a>
+                        <a class="btn btn-large waves-effect waves-light warna-kuning-gelap modal-trigger" data-target="#bayar">metode pembayaran</a>
 
                         <!--ini struktur modal-->
                         <div id="bayar" class="modal">
