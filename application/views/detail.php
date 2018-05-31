@@ -12,7 +12,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/lightbox.min.css">
     <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/logo.png">
 </head>
-<body>
+<body class="warna-grey-sedikit">
 <!--header-->
 <!--awal navigasi-->
 <div class="navbar-fixed">
@@ -78,7 +78,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </nav>
 </div>
 
-
 <!--konten-->
 <div class="warna-grey-sedikit">
     <div class="container">
@@ -97,7 +96,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <h5 class="center">Harga</h5>
                     </div>
                     <div class="kategori-side-bar isi-side-bar center">
-                        <p class="orange-text">Rp <?php echo $detail_item[0]->harga; ?></p>
+                        <p class="orange-text">Rp. 4.000.000</p>
 
                         <a href="#modal-beli" class="modal-trigger btn btn-block waves-light waves-effect warna-kuning-gelap" style="width: 80%; border-radius: 10px">Beli</a>
                         <!-- Modal Structure -->
@@ -108,13 +107,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                 <div class="row"> <!-- definisi Produk yang mau di beli -->
                                     <div class="col s4">
-                                        <img src="<?php echo base_url(); ?>assets/img/frezier3.jpg" class="circle responsive-img">
+                                        <img src="img/frezier3.jpg" class="circle responsive-img">
                                     </div>
 
                                     <div class="col s8">
                                         <div class="col s12">
                                             Nama Produk:<br>
-                                            <span class="tulisan-hijau-gelap"><b><?php echo $detail_item[0]->produkNama?></b></span>
+                                            <span class="tulisan-hijau-gelap"><b>Pupuk sib bangit dah</b></span>
                                         </div>
 
                                         <div class="col s4 input-field">
@@ -124,7 +123,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                         <div class="col s4">
                                             Harga Barang<br>
-                                        <?php echo $detail_item[0]->harga; ?>
+                                            Rp.4.000.000
                                         </div>
 
                                         <div class="input-field col s4">
@@ -133,7 +132,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                                 <option value="1">Tidak</option>
                                                 <option value="2">Ya</option>
                                             </select>
-                                            <label>Asuransi</label>
+                                            <label>Materialize Select</label>
                                         </div>
                                     </div>
                                 </div> <!-- definisi Produk yang mau di beli -->
@@ -209,7 +208,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <i class="material-icons account-size">account_circle</i>
 
                         <p>Pupuk Sejahtera <br>
-                            Mojokerto</p>
+                        Mojokerto</p>
 
                         <div class="left-align" style="margin-left: 15px">
                             <p><b>Online: </b>10 menit yang lalu</p>
@@ -225,18 +224,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <div class="row">
                             <div class="input-field col s10 offset-s1">
                                 <input type="number" class="validate">
-                                <label>Masukan Luas Lahan perhektar</label>
+                                <label>Masukan Luas Lahan</label>
                             </div>
 
                             <div class="input-field col s10 offset-s1">
                                 <select>
-<!--                                    --><?php //foreach ($detail_item as $item){ ?>
-<!--                                    <option value="1">--><?php //echo $item['namaKategori'];?><!--</option>-->
-<!--                                    --><?php //} ?>
-
-                                    <option value="1">Pupuk NPK15-15-15</option>
-                                    <option value="2">Pupuk NPK10-10-10</option>
-                                    <option value="3">Pupuk NPK30-6-8</option>
+                                    <option value="1">Nitrogen</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
                                 </select>
                                 <label>Pilih Jenis Pupuk</label>
                             </div>
@@ -251,12 +246,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="col s12 m8 white box-produk"> <!-- pilih gambar dan share -->
                 <div class="row">
                     <div class="col s12">
-                        <h5><b><?php echo $detail_item[0]->produkNama; ?></b></h5>
+                        <h5><b>Daftar Produk Kacang Pupuk Bagus</b></h5>
                     </div>
                 </div>
 
                 <div class="row bagi-select">
-                    <div class="col s12">
+                    <div class="col s6">
                         <div class="left">
                             <ul class="icon-saya">
                                 <li class="tambah">Bagikan:</li>
@@ -269,16 +264,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </div>
                     </div>
 
-<!--                    <div class="input-field col s6">-->
-<!--                        <select>-->
-<!--                            <option value="" disabled selected>Choose your option</option>-->
-<!--                            <option value="1">Option 1</option>-->
-<!--                            <option value="2">Option 2</option>-->
-<!--                            <option value="3">Option 3</option>-->
-<!--                        </select>-->
-<!--                        <label>Pilih Urutant</label>-->
-<!--                    </div>-->
-<!--                </div>-->
+                    <div class="input-field col s6">
+                        <select>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Pilih Urutant</label>
+                    </div>
+                </div>
 
                 <hr>
 
@@ -326,11 +321,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                         <div class="deskripsi-produk-detail">
                             <div class="deskripsi-produk-detail-header">
-                                <h5><?php echo $detail_item[0]->produkNama; ?></h5>
+                                <h5>header</h5>
                             </div>
 
-                            <div class="deskripsi-produk-detail-teks">
-                                <?php echo $detail_item[0]->deskripsiProduk;?>
+                            <div class="deskripsi-produk-detail-teks">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut corporis delectus,
+                                est ex harum illum laborum modi odio odit pariatur perspiciatis praesentium rem sit
+                                tempore veritatis vitae voluptas! Ad adipisci aliquid animi cumque delectus eius
+                                explicabo id illum iure laborum laudantium, possimus quaerat reiciendis repudiandae
+                                soluta temporibus unde voluptates?
                             </div>
                         </div>
                     </div>
@@ -346,8 +344,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </div>
 <!--akhir konten-->
 
-
-
     <footer class="page-footer warna-grey-sedikit" style="background-image: url(<?php echo base_url(); ?>assets/img/background.jpg);">
         <div class="container green-text" style="text-align: left;">
             <p>AGRID (Agriculture Indonesia) merupakan sebuah wadah bagi para pemilik lahan atau petani untuk
@@ -355,7 +351,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </p>
         </div>
 
-        <hr>
+		<!-- <hr> -->
 
         <div class="container">
             <div class="row">

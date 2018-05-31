@@ -11,9 +11,9 @@ class detailController extends CI_Controller {
 
     public function index() {
         $data['detail_item'] = $this->detail_model->getDetail();
-//            echo '<pre>';
-//            print_r($data['detail_item']);
-//            echo '</pre>';
+        //    echo '<pre>';
+        //    print_r($data['detail_item']);
+        //    echo '</pre>';
         $this->load->view("detail.php", $data);
     }
 }
