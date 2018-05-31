@@ -153,7 +153,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                             <?php echo $item['harga'];?>
                                         </p>
 
-                                        <a href="#!" class="secondary-content">
+                                        <a href="<?php echo site_url('pembayaran/delete/'.$item['cartID']); ?>" class="secondary-content">
                                             <i class="material-icons red-text">delete</i>
                                         </a>
                                     </li>

@@ -15,5 +15,10 @@ class pembayaranController extends CI_Controller {
 //        print_r($data['keranjang_item']);
 //        echo '</pre>';
         $this->load->view("pembayaran.php", $data);
-    }
+	}
+	
+	public function delete($id) {
+		$this->pembayaran_model->deleteKeranjang($id);
+		redirect('pembayaran');
+	}
 }

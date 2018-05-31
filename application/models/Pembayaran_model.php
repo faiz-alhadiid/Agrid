@@ -19,5 +19,9 @@ Class Pembayaran_Model extends CI_Model {
        $this->db->where('keranjang.status', 0);
        $query = $this->db->get();
        return $query->result_array();
-    }
+	}
+	
+	public function deleteKeranjang($id) {
+		return $this->db->delete('keranjang', array('cartID'=>$id));
+	}
 }
