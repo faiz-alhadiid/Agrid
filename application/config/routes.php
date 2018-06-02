@@ -75,6 +75,10 @@ $route['detail'] = "detailController/index";
 $route['produk'] = "produkController/index";
 //akhir rute ke halaman produk
 
+//awal rute ke halaman admin
+$route['admin'] = "adminController/index";
+//akhir rute ke halaman admin
+
 
 
 
