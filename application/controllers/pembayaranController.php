@@ -13,7 +13,8 @@ class pembayaranController extends CI_Controller {
         $data['keranjang_item'] = $this->pembayaran_model->getPembayaran();
     //    echo '<pre>';
     //    print_r($data['keranjang_item']);
-    //    echo '</pre>';
+	//    echo '</pre>';
+		$this->load->view('header');
         $this->load->view("pembayaran.php", $data);
 	}
 	
