@@ -14,7 +14,7 @@ class MainController extends CI_Controller{
     }
     public function index(){
         $res = $this->agrid_model->readRecommendedProduct(6);
-        $temp = array('data' =>$res);
+		$temp = array('data' =>$res);
         $this->load->view('header.php');
         $this->load->view('index.php', $temp); 
         $this->load->view('footer.php');       

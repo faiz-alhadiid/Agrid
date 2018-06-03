@@ -9,8 +9,8 @@ class detailController extends CI_Controller {
         $this->load->helper('url_helper');
     }
 
-    public function index() {
-        $data['detail_item'] = $this->detail_model->getDetail();
+    public function index($id) {
+        $data['detail_item'] = $this->detail_model->getDetail($id);
         //    echo '<pre>';
         //    print_r($data['detail_item']);
         //    echo '</pre>';

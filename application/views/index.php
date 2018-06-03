@@ -1,7 +1,102 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
-?>
+<!-- Modal Structure -->
+                        <div id="modal-beli" class="modal">
+                            <div class="modal-content left-align">
+                                <h4>Beli</h4>
+                                <hr>
 
+                                <div class="row"> <!-- definisi Produk yang mau di beli -->
+                                    <div class="col s4">
+                                        <img src="img/frezier3.jpg" class="circle responsive-img">
+                                    </div>
+
+                                    <div class="col s8">
+                                        <div class="col s12">
+                                            Nama Produk:<br>
+                                            <span class="tulisan-hijau-gelap"><b>Pupuk sib bangit dah</b></span>
+                                        </div>
+
+                                        <div class="col s4 input-field">
+                                            <input placeholder="ini di sini" id="num-beli" type="number" class="validate">
+                                            <label for="num-beli">Jumlah Barang</label>
+                                        </div>
+
+                                        <div class="col s4">
+                                            Harga Barang<br>
+                                            Rp.<?php echo "4.000.000" ?>
+                                        </div>
+
+                                        <div class="input-field col s4">
+                                            <select>
+                                                <option value="" disabled selected>Your option</option>
+                                                <option value="1">Tidak</option>
+                                                <option value="2">Ya</option>
+                                            </select>
+                                            <label>Materialize Select</label>
+                                        </div>
+                                    </div>
+                                </div> <!-- definisi Produk yang mau di beli -->
+
+                                <hr>
+
+                                <div class="row"><!-- awal form pengisina beli-->
+                                    <h5>Tambah Alamat</h5>
+                                    <form class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                                <label for="first_name">First Name</label>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input id="last_name" type="text" class="validate">
+                                                <label for="last_name">Last Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                                                <label for="disabled">Disabled</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="password" type="password" class="validate">
+                                                <label for="password">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="email" type="email" class="validate">
+                                                <label for="email">Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input id="pos" type="number" class="validate">
+                                                <label for="pos">pos kode</label>
+                                            </div>
+
+                                            <div class="input-field col s6">
+                                                <input id="telp" type="number" class="validate">
+                                                <label for="telp">no. Telp</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div> <!-- akhir form pengisina beli-->
+                            </div> <!-- akhir isi konten-->
+
+                            <div class="modal-footer">
+                                <div class="row">
+                                    <div class="col s6">
+                                        <button class="btn waves-light waves-effect warna-hijau-gelap" style="width: 100%"><span class="white-text">Batal</span></button>
+                                    </div>
+
+                                    <div class="col s6">
+                                        <button class="btn waves-light waves-effect warna-kuning-gelap" style="width: 100%"><span class="white-text">Simpan</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- akhir dari modal di index -->
 
 
 <!--konten-->
@@ -11,7 +106,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="col s12">
                 <hr><h5 class="center-align thick">PUPUK REKOMENDASI</h5><hr style="margin-bottom: 40px;">
             </div>
-            
+
             <?php
             if ($data){ 
             foreach ($data as $d){ ?>
@@ -25,7 +120,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <div class="card-action">
                             <p class="harga-produk">Rp <?=$d->harga?></p>
                         </div>
-                        <a href = "<?= base_url().'beli/'.$d->produkID?>"class="waves-effect waves-light btn warna-hijau-gelap" style="width: 100%; margin-top: 20px;">Beli</a>
+                        <!-- <a href = "<?= base_url().'beli/'.$d->produkID?>"class="waves-effect waves-light btn warna-hijau-gelap" style="width: 100%; margin-top: 20px;">Beli</a> -->
+						<a href="#modal-beli" class="modal-trigger waves-effect waves-light btn warna-hijau-gelap" style="width: 100%; margin-top: 20px;">Beli</a>
+
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4"><?=$d->produkNama?><i class="material-icons right">close</i></span>

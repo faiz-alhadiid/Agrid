@@ -68,7 +68,7 @@ $route['pembayaran/delete/(:any)'] = "pembayaranController/delete/$1";
 //akhir rute ke halaman pembayaran
 
 //awal rute ke halaman pembayaran
-$route['detail'] = "detailController/index";
+$route['detail/(:any)'] = "detailController/index/$1";
 //akhir rute ke halaman pembayaran
 
 //awal rute ke halaman produk

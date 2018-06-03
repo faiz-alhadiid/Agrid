@@ -11,8 +11,8 @@ Class Detail_Model extends CI_Model {
         $this->load->database();
     }
 
-    public function getDetail() {
-        $this->db->where('produkID', 1);
+    public function getDetail($id) {
+        $this->db->where('produkID', $id);
        $query = $this->db->get('produk');
        return $query->result();
     }

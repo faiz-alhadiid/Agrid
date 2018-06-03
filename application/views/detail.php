@@ -79,6 +79,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </div>
 
 <!--konten-->
+<?php foreach ($detail_item as $item) { ?>
 <div class="warna-grey-sedikit">
     <div class="container">
         <div class="row">
@@ -96,7 +97,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <h5 class="center">Harga</h5>
                     </div>
                     <div class="kategori-side-bar isi-side-bar center">
-                        <p class="orange-text">Rp. 4.000.000</p>
+                        <p class="orange-text">Rp.<?php echo $item->harga; ?></p>
 
                         <a href="#modal-beli" class="modal-trigger btn btn-block waves-light waves-effect warna-kuning-gelap" style="width: 80%; border-radius: 10px">Beli</a>
                         <!-- Modal Structure -->
@@ -107,13 +108,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                 <div class="row"> <!-- definisi Produk yang mau di beli -->
                                     <div class="col s4">
-                                        <img src="img/frezier3.jpg" class="circle responsive-img">
+                                        <img src="<?php echo base_url();?>assets/img/produk/<?php echo $item->gambar?>" class="circle responsive-img">
                                     </div>
 
                                     <div class="col s8">
                                         <div class="col s12">
                                             Nama Produk:<br>
-                                            <span class="tulisan-hijau-gelap"><b>Pupuk sib bangit dah</b></span>
+                                            <span class="tulisan-hijau-gelap"><b><?php echo $item->produkNama; ?></b></span>
                                         </div>
 
                                         <div class="col s4 input-field">
@@ -123,7 +124,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                         <div class="col s4">
                                             Harga Barang<br>
-                                            Rp.4.000.000
+                                            Rp.<?php echo $item->harga; ?>
                                         </div>
 
                                         <div class="input-field col s4">
@@ -246,7 +247,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="col s12 m8 white box-produk"> <!-- pilih gambar dan share -->
                 <div class="row">
                     <div class="col s12">
-                        <h5><b>Daftar Produk Kacang Pupuk Bagus</b></h5>
+                        <h5><b><?php echo $item->produkNama ?></b></h5>
                     </div>
                 </div>
 
@@ -324,11 +325,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <h5>header</h5>
                             </div>
 
-                            <div class="deskripsi-produk-detail-teks">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut corporis delectus,
-                                est ex harum illum laborum modi odio odit pariatur perspiciatis praesentium rem sit
-                                tempore veritatis vitae voluptas! Ad adipisci aliquid animi cumque delectus eius
-                                explicabo id illum iure laborum laudantium, possimus quaerat reiciendis repudiandae
-                                soluta temporibus unde voluptates?
+                            <div class="deskripsi-produk-detail-teks">
+								<?php echo $item->deskripsiProduk ?>
                             </div>
                         </div>
                     </div>
@@ -342,6 +340,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </div> <!-- akhir konten-->
     </div>
 </div>
+<?php } ?>
 <!--akhir konten-->
 
     <footer class="page-footer warna-grey-sedikit" style="background-image: url(<?php echo base_url(); ?>assets/img/background.jpg);">
